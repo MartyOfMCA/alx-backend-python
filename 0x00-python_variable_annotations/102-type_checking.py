@@ -4,9 +4,13 @@ Defines a type-annotated function that returns
 a list of numbers multiplied by the given
 factor.
 """
+from typing import (
+        Tuple,
+        List
+        )
 
 
-def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
     """
     Returns a list of numbers multiplied by the
     given factor.
@@ -23,7 +27,7 @@ def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
         multiplying the tuple elements
         against the factor.
     """
-    zoomed_in: Tuple = [
+    zoomed_in: List = [
         item for item in lst
         for i in range(factor)
     ]
