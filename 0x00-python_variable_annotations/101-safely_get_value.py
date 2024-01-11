@@ -3,9 +3,18 @@
 Define a type-annotated function to safely
 get the values of a dictionary.
 """
+from typing import (
+        Union,
+        Any,
+        Mapping,
+        TypeVar
+        )
+T = TypeVar('T')
 
 
-def safely_get_value(dct, key, default=None):
+def safely_get_value(dct: Mapping,
+                     key: Any,
+                     default: Union[T, None] = None) -> Union[Any, T]:
     """
     Safely fetch the value macthing the given
     key in the dictionary.
@@ -14,7 +23,7 @@ def safely_get_value(dct, key, default=None):
         dct : dict
         A dictionary of key-value pairs.
 
-        key : string
+        key : any
         The key to be used to fetch a value
         from the dictionary.
 
