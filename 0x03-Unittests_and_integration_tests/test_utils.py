@@ -10,7 +10,7 @@ from utils import access_nested_map
 
 class TestAccessNestedMap(TestCase):
     """
-    Test class for utils module.
+    Test class for the access nested map function.
     """
 
     @parameterized.expand([
